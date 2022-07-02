@@ -14,42 +14,6 @@ header {
     color: white;
 }
 
-/* .contenedor {
-    display: line;
-    padding: 1rem;
-}
-
-.contenedor h2 {
-    margin: 0 0 1rem 0;
-    text-align: center;
-}
-
-.panelTarea {
-    padding: 2rem;
-    background-color: white;
-    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
-}
-
-.panelTarea label {
-    font-size: 18px;
-}
-
-.panelTabla {
-    display: content;
-    background-color: white;
-    padding: 1rem;
-    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
-}
-
-.tablaContenido {
-    text-align: center;
-    border: 1px solid black;
-}
-
-.tablaContenido th {
-    padding: 1rem 2.2rem;
-} */
-
 .contenedor {
     display: block;
     padding: 1rem;
