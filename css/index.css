@@ -1,0 +1,108 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(241, 227, 208);
+}
+
+header {
+    background-color: burlywood;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+/* .contenedor {
+    display: line;
+    padding: 1rem;
+}
+
+.contenedor h2 {
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.panelTarea {
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+.panelTarea label {
+    font-size: 18px;
+}
+
+.panelTabla {
+    display: content;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+.tablaContenido {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tablaContenido th {
+    padding: 1rem 2.2rem;
+} */
+
+.contenedor {
+    display: block;
+    padding: 1rem;
+}
+
+.contenedor .panelTareas{
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+.panelTareas {
+    padding: 1.5rem;
+    margin: .5% 28%;
+}
+
+.panelTablaRealizar {
+    display: grid;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(233, 170, 170);
+    border: 2px solid black;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+th, td {
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: .5rem;
+}
+
+.panelTablaFinalizado {
+    display: grid;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(174, 217, 174);
+    border: 2px solid black;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+.textCenter {
+    margin: 0 auto;
+}
+
+textarea {
+    min-width: 40%;
+    max-width: 52%;
+    min-height: 5rem;
+    max-height: 8rem;
+}
