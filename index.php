@@ -15,13 +15,15 @@
         $descripcion = $conecta->real_escape_string($_POST['txtDescripcion']);
         $realizado = 0;
 
-        $insertar = "INSERT INTO tareas (nombre, descripcion, realizado) VALUES 
-                                ('$nombre', '$descripcion', '$realizado')";
+        $insertar = "INSERT INTO tareas (nombre, descripcion, realizado) VALUES ('$nombre', '$descripcion', '$realizado')";
         $guardarInsertar = $conecta->query($insertar);
 
         if ($guardarInsertar > 0) {
             echo "<script>alert('Se guardo con exito.');</script>";
             $guardar = $conecta->query($consultaTablaPendiente);
+            
+            header("location:index.php");
+            $conecta->close();
         } else {
             echo "<script>alert('Error al guardar.');</script>";
         }
@@ -57,7 +59,8 @@
                 
                 <br><input type="submit" id="btnGenerar" name="btnGenerar" value="Generar tarea">
             </form>
-        </div><br><br>
+        </div>
+        <br><br>
 
         <div class="panelTablaRealizar">
             <table>
@@ -81,8 +84,8 @@
                         <td> <?php echo $row['descripcion']; ?> </td>
                         <td> <?php echo validarRealizado($row['realizado']); ?> </td>
                         <td>
-                            <a href="#">Editar</a>-
-                            <a href="#">Borrar</a>
+                            <a href="./vista/Modificar.php?txtId=<?php echo $row['id']; ?>" id="btnEditar" name="btnEditar">Editar</a> -
+                            <a href="./script/Eliminar.php?txtId=<?php echo $row['id']; ?>">Borrar</a>
                         </td>
                     </tr>
                     <?php } ?>
@@ -111,7 +114,7 @@
                         <td> <?php echo $row['nombre']; ?> </td>
                         <td> <?php echo $row['descripcion']; ?> </td>
                         <td> <?php echo validarRealizado($row['realizado']); ?> </td>
-                        <td> <a href="#">Borrar</a> </td>
+                        <td> <a href="./script/Eliminar.php?txtId=<?php echo $row['id']; ?>">Borrar</a> </td>
                     </tr>
                     <?php } ?>
                 </tbody>
